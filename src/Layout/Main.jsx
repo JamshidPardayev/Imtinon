@@ -8,10 +8,10 @@ const Main = () => {
 
   return (
     <div className='flex'>
-       <div className="">
+       <div className="max-w-[241px]">
             <Nav isOpen={isOpen} setIsOpen={setIsOpen} />
        </div>
-        <div className="w-[100%]">
+        <div className="w-full overflow-x-hidden">
             <Header isOpen={isOpen} setIsOpen={setIsOpen}/>
             <Outlet/>
         </div>
