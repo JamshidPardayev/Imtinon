@@ -22,7 +22,7 @@ const DynamicTeacher = () => {
             "x-auth-token": token,
           },
         });
-        setTeacher(response.data); // Assuming the API returns an object with teacher info
+        setTeacher(response.data);
       } catch (error) {
         console.error("Error fetching teacher data:", error);
       }
