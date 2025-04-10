@@ -17,7 +17,7 @@ function App() {
           <Route path="/Teachers" element={<Teachers />} />
           <Route path="/AddTeacher" element={<AddTeacher />} />
           <Route path="/Teacher1" element={<Teachers />} />
-          <Route path="/DynamicTeacher" element={<DynamicTeacher />} />
+          <Route path="/DynamicTeacher/:id" element={<DynamicTeacher />} />
 
         </Route>
         <Route path="/" element={<Login />} />

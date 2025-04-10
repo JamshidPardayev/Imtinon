@@ -11,7 +11,7 @@ const Main = () => {
        <div className="">
             <Nav isOpen={isOpen} setIsOpen={setIsOpen} />
        </div>
-        <div className="w-full">
+        <div className="w-[100%]">
             <Header isOpen={isOpen} setIsOpen={setIsOpen}/>
             <Outlet/>
         </div>

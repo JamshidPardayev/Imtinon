@@ -63,23 +63,21 @@ const Teachers = () => {
             <thead>
               <tr>
                 {["ID", "Fullname", "Email", "Phone Number", "Role", "CreatedAt", "UpdatedAt"].map((heading) => (
-                  <th key={heading} className="font-bold border border-gray-300 p-2">{heading}</th>
+                  <td key={heading} className="font-bold border border-gray-300 p-2">{heading}</td>
                 ))}
               </tr>
             </thead>
             <tbody>
               {filteredUsers.map((user) => (
-                <Link to={`/DynamicTeacher/${user.id}`} key={user.id}>
-                  <tr className="cursor-pointer hover:bg-gray-100">
+                  <tr key={user.id} className="cursor-pointer hover:bg-gray-100">
                     <td className="border border-gray-300 p-2">{user.id}</td>
-                    <td className="border border-gray-300 p-2">{user.fullname}</td>
+                    <td className="border border-gray-300 p-2"><Link to={`/DynamicTeacher/${user.id}`}>{user.fullname}</Link></td>
                     <td className="border border-gray-300 p-2">{user.email}</td>
                     <td className="border border-gray-300 p-2">{user.phone_number}</td>
                     <td className="border border-gray-300 p-2">{user.role}</td>
                     <td className="border border-gray-300 p-2">{new Date(user.createdAt).toLocaleString()}</td>
                     <td className="border border-gray-300 p-2">{new Date(user.updatedAt).toLocaleString()}</td>
                   </tr>
-                </Link>
               ))}
             </tbody>
           </table>
